@@ -1,0 +1,60 @@
+.banner {
+  position: relative;
+  height: 60vh;
+  background: url('https://t3.ftcdn.net/jpg/01/49/04/70/360_F_149047093_41RVapY389uCiolg8Hvn0FJ8N2SfHLeC.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: #f8f9fa;
+  transform: skewY(-2deg);
+  transform-origin: bottom left;
+  z-index: 2;
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+  z-index: 4;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.banner-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.page-banner {
+  height: 50vh;
+  min-height: 400px;
+}

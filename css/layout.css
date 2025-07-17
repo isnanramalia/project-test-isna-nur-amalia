@@ -1,0 +1,58 @@
+.main-content {
+  width: 100%;
+  margin: -100px 0 0;
+  padding: 100px 20px 60px;
+  position: relative;
+  z-index: 10;
+  background: #f8f9fa;
+}
+
+.page-content {
+  padding: 60px 20px;
+}
+
+.page-section {
+  margin-bottom: 60px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.showing-info {
+  color: #666;
+  font-size: 14px;
+}
+
+.control-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.control-group label {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.control-group select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: white;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.control-group select:focus {
+  outline: none;
+  border-color: #ff6b35;
+}

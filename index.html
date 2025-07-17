@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ideas - Where all our great things begin. Discover innovative concepts and creative solutions."
+    />
+    <meta
+      name="keywords"
+      content="ideas, innovation, creativity, solutions, concepts"
+    />
+    <meta name="author" content="Suitmedia" />
+
+    <title>Ideas - Suitmedia</title>
+
+    <!-- exs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="navigation-container"></div>
+
+    <!-- banner -->
+    <section class="banner" id="banner" role="banner">
+      <div class="banner-content">
+        <h1>Ideas</h1>
+        <p>Where all our great things begin</p>
+      </div>
+    </section>
+
+    <!-- banner -->
+    <main class="main-content" role="main">
+      <div class="content-container">
+        <!-- dropdown size -->
+        <section class="controls" aria-label="Content controls">
+          <div class="showing-info" id="showingInfo" aria-live="polite">
+            Showing 1 - 10 of 100
+          </div>
+          <div class="control-group">
+            <label for="showPerPage">Show per page:</label>
+            <select id="showPerPage" aria-label="Number of items per page">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+            </select>
+
+            <label for="sortBy">Sort by:</label>
+            <select id="sortBy" aria-label="Sort order">
+              <option value="-published_at">Newest</option>
+              <option value="published_at">Oldest</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- gris -->
+        <section
+          class="ideas-grid"
+          id="ideasGrid"
+          role="region"
+          aria-label="Ideas list"
+        ></section>
+
+        <!-- loadstate -->
+        <div
+          class="loading"
+          id="loading"
+          style="display: none"
+          aria-live="polite"
+        >
+          Loading ideas...
+        </div>
+
+        <!-- pagination -->
+        <nav
+          class="pagination"
+          id="pagination"
+          role="navigation"
+          aria-label="Pagination navigation"
+        ></nav>
+      </div>
+    </main>
+
+    <!-- dialog -->
+    <div
+      class="modal"
+      id="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-content">
+        <header class="modal-header">
+          <img id="modalImage" src="" alt="" />
+          <button
+            class="modal-close"
+            onclick="closeModal()"
+            aria-label="Close modal"
+          >
+            &times;
+          </button>
+        </header>
+        <div class="modal-body">
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-date" id="modalDate"></p>
+          <div class="modal-text" id="modalText"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js files -->
+    <script src="./js/NavigationComponent.js"></script>
+    <script src="./js/UIRenderer.js"></script>
+    <script src="./js/IdeasApp.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
